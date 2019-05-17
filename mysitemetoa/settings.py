@@ -25,7 +25,7 @@ SECRET_KEY = '-$$bqc*woq7u#sif27hwv=3%k0esy)#^^#^rqvn0bt+j!ozys+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [r'mysitemetoa.azurewebsites.net']
 
 
 # Application definition
