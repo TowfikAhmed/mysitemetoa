@@ -80,8 +80,13 @@ WSGI_APPLICATION = 'mysitemetoa.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',     
+        'USER': 'mydbmetoa@mydbmetoa',      
+        'PASSWORD': 'To@74319548',     
+        'HOST': 'mydbmetoa.postgres.database.azure.com',      
+        'PORT': '5432',
+        'sslmode':'true'
     }
 }
 
