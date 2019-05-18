@@ -35,5 +35,4 @@ urlpatterns = [
     path("failedlist/", views.failedlist, name="failedlist"),
     path("waitinglist/", views.waitinglist, name="waitinglist"),
     
-] 
-# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
