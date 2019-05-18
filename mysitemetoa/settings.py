@@ -25,7 +25,8 @@ SECRET_KEY = '-$$bqc*woq7u#sif27hwv=3%k0esy)#^^#^rqvn0bt+j!ozys+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [r'odaway.com']
+# ALLOWED_HOSTS = [r'odaway.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myapp',
+    'crispy_forms',
+    'ckeditor',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = u'/home/mysitemetoa/mysitemetoa/media'
+MEDIA_URL = '/media/'
+STATIC_ROOT = u'/home/mysitemetoa/mysitemetoa/static'
+STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = 'profile'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'  
