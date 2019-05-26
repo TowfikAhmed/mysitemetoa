@@ -13,7 +13,7 @@ def deltasecs(time):
 
 
 def getmsgdata(auser, msgno):
-	udata = temps.objects.filter(user=auser)
+	udata = temps.objects.filter(user=auser).order_by('id')
 	dset = udata[int(msgno)] 
 	getmsg = dset.message
 	dtime = dset.delay

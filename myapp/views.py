@@ -112,21 +112,22 @@ class templistview(ListView):
     template_name = 'temps_list.html'
     context_object_name = 'posts'
     def get_queryset(self):
-        return self.model.objects.filter(user=self.request.user)
+        return self.model.objects.filter(user=self.request.user).order_by('id')
 
 class templistview2(ListView):
     model = temps
     template_name = 'temps_list2.html'
     context_object_name = 'posts'
+    ordering = '-id'
     def get_queryset(self):
-        return self.model.objects.filter(user=self.request.user)
+        return self.model.objects.filter(user=self.request.user).order_by('id')
 
 class templistview3(ListView):
     model = temps
     template_name = 'temps_list3.html'
     context_object_name = 'posts'
     def get_queryset(self):
-        return self.model.objects.filter(user=self.request.user)
+        return self.model.objects.filter(user=self.request.user).order_by('id')
 
 
 class tempdetailtview(DetailView):
